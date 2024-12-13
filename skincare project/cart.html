@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="photos/OIP.jpeg" alt="Brand Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about-us">About</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="product.html">
+            <button>Shop Now</button>
+        </a>
+    </header>
+
+    <div class="cart-container">
+        <h1>Your Cart</h1>
+
+        <!-- Cart Item 1 -->
+        <div class="cart-item">
+            <h3>Product: <span id="product-name1">Product 1</span></h3>
+            <p>Price: <span id="product-price1">$19.99</span></p>
+        </div>
+
+        <!-- Cart Item 2 -->
+        <div class="cart-item">
+            <h3>Product: <span id="product-name2">Product 2</span></h3>
+            <p>Price: <span id="product-price2">$29.99</span></p>
+        </div>
+
+        <button>Proceed to Checkout</button>
+    </div>
+
+    <script>
+        // Get product details from URL parameters (if any)
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        const productName1 = urlParams.get('product_name');
+        const productPrice1 = urlParams.get('product_price');
+        
+        if (productName1 && productPrice1) {
+            document.getElementById('product-name1').textContent = productName1;
+            document.getElementById('product-price1').textContent = productPrice1;
+        }
+    </script>
+</body>
+</html>

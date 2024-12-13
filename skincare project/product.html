@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="photos/OIP.jpeg" alt="Brand Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about-us">About</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="product.html">
+            <button>Shop Now</button>
+        </a>
+    </header>
+
+
+    <div class="product-container">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="photos/photo1.jpg" alt="Product 1" class="product-image">
+            <h3 class="product-name">Product 1</h3>
+            <p class="product-description">Short description of Product 1.</p>
+            <p class="product-price">$19.99</p>
+            <!-- Form for adding to cart -->
+            <form action="cart.html" method="GET">
+                <input type="hidden" name="product_id" value="1">
+                <input type="hidden" name="product_name" value="Product 1">
+                <input type="hidden" name="product_price" value="$19.99">
+                <button type="submit" class="add-to-cart">Add to Cart</button>
+                <button type="submit" class="add-to-cart">Buy Now</button>
+            </form>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="photos/OIP.jpeg" alt="Product 2" class="product-image">
+            <h3 class="product-name">Product 2</h3>
+            <p class="product-description">Short description of Product 2.</p>
+            <p class="product-price">$29.99</p>
+            <!-- Form for adding to cart -->
+            <form action="cart.html" method="GET">
+                <input type="hidden" name="product_id" value="2">
+                <input type="hidden" name="product_name" value="Product 2">
+                <input type="hidden" name="product_price" value="$29.99">
+                <button type="submit" class="add-to-cart">Add to Cart</button>
+                <button type="submit" class="add-to-cart">Buy Now</button>
+            </form>
+        </div>
+
+        <!-- Add more product cards as needed -->
+    </div>
+</body>
+</html>
